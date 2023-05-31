@@ -12,8 +12,8 @@ import 'package:password_credential/entity/result.dart';
 
 class PasswordCredentialPlugin {
   static void registerWith(Registrar registrar) {
-    final MethodChannel channel = MethodChannel("password_credential",
-        const StandardMethodCodec(), registrar.messenger);
+    final MethodChannel channel = MethodChannel(
+        "password_credential", const StandardMethodCodec(), registrar);
     channel.setMethodCallHandler(PasswordCredentialPlugin().handleMethodCall);
   }
 
@@ -117,6 +117,5 @@ class PasswordCredentialPlugin {
       case Mediation.Required:
         return "required";
     }
-    throw ArgumentError();
   }
 }
