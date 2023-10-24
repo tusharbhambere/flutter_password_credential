@@ -28,7 +28,7 @@ apply plugin: "org.jetbrains.kotlin.plugin.serialization"
 
 android {
     compileSdk 33
-
+    namespace "net.irgaly.password_credential"
     sourceSets {
         main.java.srcDirs += "src/main/kotlin"
     }
